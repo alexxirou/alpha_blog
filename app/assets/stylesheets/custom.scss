@@ -1,3 +1,30 @@
+html,
+body {
+  height: 100%;
+  margin: 0; /* Remove default margin */
+}
+
+/* Apply flexbox layout to body for centering */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure that all parent containers have height: 100% */
+#page-content, #home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-content{
+   /* Fill remaining vertical space */
+  background-color: lightgrey;
+  flex: 1;
+}
+
+/* Navbar styling */
 .navbar {
   background-color: black !important;
 }
@@ -15,37 +42,21 @@
   font-weight: bold;
 }
 
-#home-container {
-  margin-top: 25px;
-  
-  
-}
-
+/* Jumbotron styling */
 .jumbotron {
-  background-image: asset-url('jumbo-copy.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('jumbo-copy.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 425px;
-
+  height: 70vh; /* Adjust height as needed */
+  width: 80vw;
 }
 
-html,
-body {
-  height: 100%;
-}
-
-#page-content {
-  flex: 1 0 auto;
-  background-color: lightgrey;
-  width: 100vw;
-  padding: 100px;
-}
-
+/* Sticky footer */
 #sticky-footer {
   flex-shrink: none;
-  position: absolute;
-  bottom: 0;
-  left:0;
-  right: 0;
 }
