@@ -17,14 +17,17 @@
 
 #home-container {
   margin-top: 25px;
+  
+  
 }
 
 .jumbotron {
   background-image: asset-url('jumbo-copy.jpg');
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 425px;
+
 }
 
 html,
@@ -35,10 +38,14 @@ body {
 #page-content {
   flex: 1 0 auto;
   background-color: lightgrey;
-  width: 70vw;
+  width: 100vw;
   padding: 100px;
 }
 
 #sticky-footer {
   flex-shrink: none;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right: 0;
 }
