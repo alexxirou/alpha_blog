@@ -11,7 +11,7 @@
           <%= link_to "Articles", articles_path, class: "nav-link active" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <%= link_to "Bloggers", users_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -19,15 +19,25 @@
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
+            
+          
+ 
+            <% if logged_in? %>
+            <li class="dropdown-item">
+              <%= link_to current_user.username, user_path(current_user), class: "text-decoration-none text-black" %>
             </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-
+            <li class="dropdown-item">
+              <%= link_to 'Logout', logout_path, class: "text-decoration-none text-black", method: :delete %>
+            </li>
+            <% else %>
+            <li class="dropdown-item">
+              <%= link_to 'Log in', login_path, class: "text-decoration-none text-black" %>
+            </li>
+            <li class="dropdown-item">
+              <%= link_to 'Sign up', signup_path, class: "text-decoration-none text-black" %>
+            </li>
+            <% end %>
+        </ul>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
