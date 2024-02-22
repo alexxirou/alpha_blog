@@ -106,14 +106,11 @@ GEM
       ruby2_keywords
     error_highlight (0.6.0)
     erubi (1.12.0)
+    ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    importmap-rails (2.0.1)
-      actionpack (>= 6.0.0)
-      activesupport (>= 6.0.0)
-      railties (>= 6.0.0)
     io-console (0.7.2)
     irb (1.11.2)
       rdoc
@@ -211,6 +208,14 @@ GEM
     rexml (3.2.6)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (4.17.0)
       base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
@@ -233,6 +238,7 @@ GEM
       railties (>= 6.0.0)
     stringio (3.1.0)
     thor (1.3.0)
+    tilt (2.3.0)
     timeout (0.4.1)
     turbo-rails (2.0.2)
       actionpack (>= 6.0.0)
@@ -270,11 +276,11 @@ DEPENDENCIES
   cssbundling-rails (~> 1.4)
   debug
   error_highlight (>= 0.4.0)
-  importmap-rails
   jbuilder
   jsbundling-rails (~> 1.3)
   puma (>= 5.0)
   rails (~> 7.1.3)
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
