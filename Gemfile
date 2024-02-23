@@ -81,3 +81,5 @@ group :production do
 end
 
 
+
+gem "dotenv-rails", "~> 3.0"

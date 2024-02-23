@@ -23,9 +23,9 @@ production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: alpha_blog
+  database: <%= ENV['ALPHA_BLOG_DATABASE'] %>
   pool: 5
-  username: alpha_blogappuser
-  password: alpha_blog
+  username: <%= ENV['ALPHA_BLOG_DATABASE_USER'] %>
+  password: <%= ENV['ALPHA_BLOG_DATABASE_PASSWORD'] %>
   host: localhost
 
