@@ -1,6 +1,6 @@
 {
   "name": "Alpha_Blog",
-  "private": "true",
+  "private": true,
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.3",
@@ -27,5 +27,11 @@
   ],
   "devDependencies": {
     "esbuild": "^0.20.1"
-  }
+  },
+  "version": "1.0.0",
+  "description": "A blog where users can create edit and delete articles.",
+  "main": "index.js",
+  "repository": "https://github.com/alexxirou/alpha_blog",
+  "author": "Alex Xirouchakis",
+  "license": "MIT"
 }

@@ -3,7 +3,6 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem "sqlite3"
-#
 default: &default
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -24,8 +23,9 @@ production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: alpha_blog_production
+  database: alpha_blog
   pool: 5
-  username: alpha_blog_user
-  password: password
+  username: alpha_blogappuser
+  password: alpha_blog
   host: localhost
+

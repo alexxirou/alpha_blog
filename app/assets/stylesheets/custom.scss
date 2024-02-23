@@ -43,13 +43,19 @@ body {
   font-weight: bold;
 }
 
+
+/* Sticky footer */
+#sticky-footer {
+  flex-shrink: none;
+}
+
+
 /* Jumbotron styling */
 .jumbotron {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('jumbo-copy.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,10 +63,7 @@ body {
   width: 80vw;
 }
 
-/* Sticky footer */
-#sticky-footer {
-  flex-shrink: none;
-}
+
 
 
 
@@ -96,4 +99,3 @@ body {
   margin-right: 1em; }
 .flickr_pagination .next_page {
   margin-left: 1em; }
-    
