@@ -1,15 +1,21 @@
 <div id="page-content">
-  <div class="container" id="home-container">
+  <div class="container-fluid" id="home-container">
     <div class="jumbotron text-center text-white" style="background-image: url(<%= image_path('jumbo-copy.jpg') %>)">
       <h1 class="display-4">Alpha Blog</h1>
       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
       <hr class="my-4">
       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <a class="btn btn-success btn-lg col-1" href="users/new" role="button">Sign up!</a>
+      <a class="btn btn-success btn-lg" href="users/new" role="button">Sign up!</a>
     </div>
   </div>
   <div class="container text-center">
-    <strong><%= link_to 'Articles listing', articles_path, class: "text-black"  %></strong>
-    <strong><%= link_to 'About page', about_path, class: "text-black"  %></strong>
+    <div class="row">
+      <div class="col">
+        <strong><%= link_to 'Articles listing', articles_path, class: "text-black"  %></strong>
+      </div>
+      <div class="col">
+        <strong><%= link_to 'About page', about_path, class: "text-black"  %></strong>
+      </div>
+    </div>
   </div>
 </div>
